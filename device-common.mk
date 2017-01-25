@@ -616,7 +616,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.vndk.version=26.1.0 \
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.egl=adreno
+    ro.hardware.egl=adreno \
+    ro.hardware.fingerprint=fpc
 
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0.vndk-sp\
