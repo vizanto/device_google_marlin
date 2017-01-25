@@ -464,5 +464,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.adm.buffering.ms=3
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.fingerprint=fpc
+
 PRODUCT_PACKAGES += \
     WallpaperPicker
