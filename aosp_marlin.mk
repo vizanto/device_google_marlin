@@ -31,8 +31,6 @@ PRODUCT_MODEL := Pixel XL
 PRODUCT_MANUFACTURER := google
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
-PRODUCT_COPY_FILES += device/google/marlin/fstab.aosp_common:root/fstab.marlin
-
 PRODUCT_COPY_FILES += device/google/marlin/backup.xml:system/etc/sysconfig/backup.xml
 
 $(call inherit-product, device/google/marlin/device-marlin.mk)
