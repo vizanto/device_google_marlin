@@ -20,6 +20,7 @@ allow cnss-daemon self:socket create_socket_perms;
 allowxperm cnss-daemon self:socket ioctl msm_sock_ipc_ioctls;
 
 allow cnss-daemon proc_net:file rw_file_perms;
+allow cnss-daemon proc_net_devroute:file r_file_perms;
 allow cnss-daemon sysfs_wifi:file write;
 allow cnss-daemon sysfs_pcie:file write;
 allow cnss-daemon sysfs_msm_core:file write;
