@@ -40,3 +40,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     WallpaperPicker
 
+ifeq ($(OFFICIAL_BUILD),true)
+    PRODUCT_PACKAGES += Updater
+endif
