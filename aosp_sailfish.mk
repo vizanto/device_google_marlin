@@ -42,4 +42,5 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(OFFICIAL_BUILD),true)
     PRODUCT_PACKAGES += Updater
+    PRODUCT_COPY_FILES += device/google/marlin/updater.xml:system/etc/sysconfig/updater.xml
 endif
