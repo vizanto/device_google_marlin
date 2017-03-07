@@ -32,6 +32,7 @@ PRODUCT_MANUFACTURER := google
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
 PRODUCT_COPY_FILES += device/google/marlin/backup.xml:system/etc/sysconfig/backup.xml
+PRODUCT_COPY_FILES += device/google/marlin/updater.xml:system/etc/sysconfig/updater.xml
 
 $(call inherit-product, device/google/marlin/device-marlin.mk)
 $(call inherit-product-if-exists, vendor/google_devices/marlin/device-vendor-marlin.mk)
