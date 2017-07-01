@@ -28,7 +28,7 @@ PRODUCT_NAME := aosp_marlin
 PRODUCT_DEVICE := marlin
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Pixel XL
-PRODUCT_MANUFACTURER := google
+PRODUCT_MANUFACTURER := Google
 PRODUCT_RESTRICT_VENDOR_FILES := true
 
 PRODUCT_COPY_FILES += device/google/marlin/fstab.aosp_common:root/fstab.marlin
