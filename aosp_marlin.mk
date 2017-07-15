@@ -38,7 +38,8 @@ $(call inherit-product-if-exists, vendor/google_devices/marlin/device-vendor-mar
 
 PRODUCT_PACKAGES += \
     Launcher3 \
-    WallpaperPicker
+    WallpaperPicker \
+    SafetyRegulatoryInfo
 
 ifeq ($(OFFICIAL_BUILD),true)
     PRODUCT_PACKAGES += Updater
