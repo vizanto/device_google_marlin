@@ -468,7 +468,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.fingerprint=fpc
 
 PRODUCT_PACKAGES += \
-    WallpaperPicker
+    WallpaperPicker \
+    SafetyRegulatoryInfo
 
 ifeq ($(OFFICIAL_BUILD),true)
     PRODUCT_PACKAGES += Updater
