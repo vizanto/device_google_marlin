@@ -617,7 +617,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno \
-    ro.hardware.fingerprint=fpc
+    ro.hardware.fingerprint=fpc \
+    ro.control_privapp_permission=enforce
 
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0.vndk-sp\
