@@ -24,12 +24,43 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 -include device/google/marlin/device-common.mk
 
+# Open GApps
+GAPPS_VARIANT := pico
+#WITH_DEXPREOPT := true
+PRODUCT_PACKAGES += \
+    GoogleCamera \
+#    Maps \
+
+GAPPS_PACKAGE_OVERRIDES := GoogleCamera
+GAPPS_FORCE_BROWSER_OVERRIDES := false
+
+GAPPS_EXCLUDED_PACKAGES := \
+    Feedback \
+    GoogleBackupTransport \
+    GoogleContactsSyncAdapter \
+    GoogleFeedback \
+    GooglePartnerSetup \
+    PrebuiltGmsCore \
+    GoogleServicesFramework \
+    GoogleLoginService \
+    GoogleCalendarSyncAdapter \
+    PrebuiltGmsCoreInstantApps \
+    AndroidPlatformServices \
+    GooglePackageInstaller \
+    SetupWizard \
+    GoogleOneTimeInitializer \
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/marlin/marlin/overlay
 
 # display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=560
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.eis.enable=1 \
+    persist.camera.is_mode=4 \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -50,6 +81,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.marlin \
     activity_recognition.marlin
+#    GmsCore \
+#    GsfProxy \
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -60,6 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # Led packages
 PRODUCT_PACKAGES += \
+    lights.msm8996 \
     lights.marlin
 
 # VR packages
@@ -69,3 +103,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprint.marlin
+
+# Include Open GApps build
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
