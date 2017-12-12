@@ -34,21 +34,24 @@ PRODUCT_PACKAGES += \
 GAPPS_PACKAGE_OVERRIDES := GoogleCamera
 GAPPS_FORCE_BROWSER_OVERRIDES := false
 
+# GooglePackageInstaller conflicts with Copperhead's PackageInstaller
 GAPPS_EXCLUDED_PACKAGES := \
     Feedback \
     GoogleBackupTransport \
     GoogleContactsSyncAdapter \
     GoogleFeedback \
     GooglePartnerSetup \
-    PrebuiltGmsCore \
-    GoogleServicesFramework \
-    GoogleLoginService \
     GoogleCalendarSyncAdapter \
-    PrebuiltGmsCoreInstantApps \
-    AndroidPlatformServices \
     GooglePackageInstaller \
     SetupWizard \
     GoogleOneTimeInitializer \
+# Everything from PrebuiltGmsCore is MicroG implemented
+#    PrebuiltGmsCore \
+#    GoogleServicesFramework \
+#    GoogleLoginService \
+#    PrebuiltGmsCoreInstantApps \
+#    AndroidPlatformServices \
+
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += device/google/marlin/marlin/overlay
